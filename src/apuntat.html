@@ -7,25 +7,25 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <title>Apunta't</title>
   </head>
-  <body>
+  <body class="bg-gray-100 text-black">
     <include src="./views/header.html"></include>
-    <div class="max-w-screen-md mx-auto">
-        <h1>Omple el formulari per apuntar-te</h1>
-        <h2>Molta sort!</h2>       
+    <div class="container max-w-screen-lg mx-auto mb-2">
+        <h1 class="font-medium mb-2 text-2xl sm:text-3xl md:text-5xl">Omple el formulari per apuntar-te</h1>
+        <h2 class="font-medium mb-2 text-xl sm:text-2xl	md:text-4xl">Molta sort!</h2>       
         <form class="">
-            <div class="">
+            <div class="mt-3 mb-3">
                 <label for="nomParticipant">Nom</label>
-                <input type="text" class="form-control" id="nomParticipant" placeholder="">
+                <input type="text" class="block w-full rounded border-slate-300 border-2 py-1.5 px-2 focus:border-5" id="nomParticipant" placeholder="">
               </div>
-            <div class="">
+            <div class="mb-3">
               <label for="emailParticipant">Email</label>
-              <input type="email" class="form-control" id="emailParticipant" placeholder="@gmail.com">
+              <input type="email" class="block w-full	rounded border-slate-300 border-2 py-1.5 px-2" id="emailParticipant" placeholder="@gmail.com">
             </div>
-            <div class="">
+            <div class="mb-3">
               <label for="edatParticipant">Edat</label>
-              <input type="number" class="form-control" id="edatParticipant" placeholder="">
+              <input type="number" class="block w-full rounded border-slate-300 border-2 py-1.5 px-2" id="edatParticipant" placeholder="">
             </div>
-            <div class="">
+            <div class="mb-3">
               <label for="fotoParticipant">Foto de perfil</label>
               <input type="file" id="fotoParticipant">
             </div>
@@ -40,21 +40,21 @@
                   <input type="checkbox" id="minuts10"> 10 minuts
                 </label>
             </div>
-            <div class="">
+            <div class="mb-3">
                 <label for="minuts30">
                   <input type="checkbox" id="minuts30"> 30 minuts
                 </label>
             </div>
-            <div class="">
+            <div class="mb-3">
                 <label for="elo">ELO:</label>
-                <select class="form-control" id="elo">
+                <select class="block w-full	rounded border-slate-300 border-2	py-1.5 px-1" id="elo">
                   <option>600-1000</option>
                   <option>1000-1400</option>
                   <option>1400-1800</option>
                   <option>>1800</option>
                 </select>
               </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="bg-lime-300 rounded border-slate-300 py-2 px-2">Enviar</button>
           </form>
     </div>
     <include src="./views/footer.html"></include>
