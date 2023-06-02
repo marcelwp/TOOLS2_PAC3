@@ -3,8 +3,8 @@
  * Do not include SCSS code in this file.
  */
 
- @tailwind base;
- @tailwind components;
+@tailwind base;
+@tailwind components;
 
 /**
  * Import variables
@@ -17,7 +17,7 @@
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
  */
- @import "npm:@fortawesome/fontawesome-free/css/all.css";
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
@@ -32,5 +32,13 @@
 /**
  * Do NOT include anything else in this file!
  */
- @tailwind utilities;
+@tailwind utilities;
 
+@layer components {
+    .text-input {
+        @apply block w-full rounded border-2 py-1.5 px-2 focus:ring-4
+    }
+    .mb-resp{
+        @apply mb-2 sm:mb-0
+    }
+}

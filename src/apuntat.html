@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <title>Apunta't</title>
   </head>
-  <body class="bg-gray-100 text-black">
+  <body class="bg-gray text-black">
     <include src="./views/header.html"></include>
     <div class="container max-w-screen-lg mx-auto mb-2">
         <h1 class="font-medium mb-2 text-2xl sm:text-3xl md:text-5xl">Omple el formulari per apuntar-te</h1>
@@ -15,47 +15,36 @@
         <form class="">
             <div class="mt-3 mb-3">
                 <label for="nomParticipant">Nom</label>
-                <input type="text" class="block w-full rounded border-slate-300 border-2 py-1.5 px-2 focus:ring-4" id="nomParticipant" placeholder="">
+                <input type="text" class="text-input" id="nomParticipant" placeholder="">
               </div>
             <div class="mb-3">
               <label for="emailParticipant">Email</label>
-              <input type="email" class="block w-full	rounded border-slate-300 border-2 py-1.5 px-2 focus:ring-4" id="emailParticipant" placeholder="@gmail.com">
+              <input type="email" class="text-input" id="emailParticipant" placeholder="@gmail.com">
             </div>
             <div class="mb-3">
               <label for="edatParticipant">Edat</label>
-              <input type="number" class="block w-full rounded border-slate-300 border-2 py-1.5 px-2 focus:ring-4" id="edatParticipant" placeholder="">
+              <input type="number" class="text-input" id="edatParticipant" placeholder="">
             </div>
             <div class="mb-3">
               <label for="fotoParticipant">Foto de perfil</label>
               <input type="file" id="fotoParticipant">
             </div>
             <p>Quin temps de partida vols jugar?</p>
-            <div class="">
-              <label for="minuts5">
-                <input type="checkbox" id="minuts5"> 5 minuts
-              </label>
-            </div>
-            <div class="">
-                <label for="minuts10">
-                  <input type="checkbox" id="minuts10"> 10 minuts
-                </label>
-            </div>
-            <div class="mb-3">
-                <label for="minuts30">
-                  <input type="checkbox" id="minuts30"> 30 minuts
-                </label>
-            </div>
-            <div class="mb-3">
+            <include src="./views/checkForGameTime.html" locals='{"id": "min5", "text":"5 minuts"}'></include>
+            <include src="./views/checkForGameTime.html" locals='{"id": "min10", "text":"10 minuts"}'></include>
+            <include src="./views/checkForGameTime.html" locals='{"id": "min30", "text":"30 minuts"}'></include>
+
+            <div class="mt-3 mb-3">
                 <label for="elo">ELO:</label>
-                <select class="block w-full	rounded border-slate-300 border-2	py-1.5 px-1 focus:ring-4" id="elo">
+                <select class="text-input" id="elo">
                   <option>600-1000</option>
                   <option>1000-1400</option>
                   <option>1400-1800</option>
                   <option>>1800</option>
                 </select>
               </div>
-            <button type="submit" class="bg-lime-300 rounded border-slate-300 py-2 px-2">Enviar</button>
-          </form>
+              <include src="./views/btnSend.html" locals='{"text":"Enviar"}'></include>
+            </form>
     </div>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
